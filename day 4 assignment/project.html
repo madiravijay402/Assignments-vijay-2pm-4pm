@@ -14,20 +14,95 @@
             border-radius: 50%;
             border-color: black;
             border-width: 2px;
+            align-self: flex-start;
+        }
+        em{
+            color: rgb(117, 18, 41);
+            font-weight: bold;
+            font-style: normal;
+        }
+        .hemu{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: lightpink;
+        }
+        form{
+            background-color: antiquewhite;
+            width: fit-content;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <h1>portfolio of Vijay Madira</h1>
-    <img src="./192111402 Vijay.JPG" alt="">
-    <nav>
+    <header>
+     <nav>
         <ul>
-            <li>about</li>
             <li>
-                <a href="form.html">form assignment</a>
-
+                <a href="">about me</a>
+            </li>
+            <li>
+                <a href="">products</a>
+            </li>
+            <li>
+                <a href="">contact</a>
             </li>
         </ul>
-    </nav>
+     </nav>
+    </header>
+    <h1>Portfolio of Vijay Madira</h1>
+    <img src="./192111402 Vijay.JPG" alt="">
+    <p>hello! every one i am <em>vijay Madira </em>,completed my B.E in computer science.passionate about new technologies</p>
+    <table border="2">
+        <tr>
+            <th colspan="3">
+                details table
+            </th>
+        </tr>
+        <tr class="hemu">
+            <th>
+                service
+            </th>
+            <th>
+                price
+            </th>
+            <th>
+                details
+            </th>
+        </tr>
+        <tr class="thamu">
+            <td>
+                web development
+            </td>
+            <td>
+                5000rs
+            </td>
+            <td>
+                simple 3 page website
+            </td>
+        </tr>
+        <tr class="ramu">
+            <td>video editing</td>
+            <td>15000rs</td>
+            <td>shortfilm/youtube edits</td>
+        </tr>
+        <tr class="vani">
+            <td>iot project</td>
+            <td>3000rs</td>
+            <td>minimum charges</td>
+        </tr>
+    </table><br><hr>
+    <form>
+        <label for="name">name</label><br>
+        <input type="text" name="name"><br>
+        <label for="email">email</label><br>
+        <input type="email" name="email"><br>
+        <label for="mobilenumber">number</label><br>
+        <input type="tel" name="number"><br>
+        <label for="message">message</label><br>
+        <textarea name="message" id="" cols="30" rows="4"></textarea><br>
+        <button type="submit">send mesage</button>
+    </form>
 </body>
 </html>
