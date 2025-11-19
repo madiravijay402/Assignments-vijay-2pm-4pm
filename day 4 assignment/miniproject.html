@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            border-color: blueviolet;
+            background-color: antiquewhite;
+            align-content: center;
+        }
+        td{
+            color:orange;
+            background-color: azure;
+        }
+    </style>
 </head>
 <body>
     <h1>6.Create a restaurant menu using nested lists.</h1>
@@ -95,15 +106,49 @@
         <button type="submit">submit</button>
     </form><hr><hr>
     <h1>9.Simple contact form</h1>
-    <label for="Name">Name</label>
+    <label for="Name">Name</label><br>
     <input type="text" name="Name"><br>
-    <label for="tel">phone number</label>
+    <label for="tel">phone number</label><br>
     <input type="tel" name="tel"><br>
-    <label for="email">email</label>
-    <input type="email" name="email">
+    <label for="email">email</label><br>
+    <input type="email" name="email"><br>
     <label for="">reason for contact</label><br>
-    <select name="reason" id="cr">
-        <option value=""></option>
-    </select>
+    <select name="reason" id="">
+        <option value="network error"> network error</option>
+        <option value="low freequency">low freequency</option>
+        <option value="5g not available">5g not available</option>
+    </select><br>
+    <h1>10.Build a timetable using a table with styled rows.</h1><br>
+        <table border="4">
+            <tr>
+                <th>sun</th>
+                <th>mon</th>
+                <th>tue</th>
+                <th>wed</th>
+                <th>thur</th>
+                <th>fri</th>
+                <th>sat</th>
+            </tr>
+            <tr>
+                <td>holiday</td>
+                <td>mat</td>
+                <td>phy</td>
+                <td>soci</td>
+                <td>phy</td>
+                <td>com</td>
+                <td>chem</td>
+            </tr>
+            <tr>
+                <td>
+                    holiday
+                </td>
+                <td>phy</td>
+                <td>mat</td>
+                <td>mat</td>
+                <td>phy</td>
+                <td>soc</td>
+                <td>eng</td>
+            </tr>
+        </table>
 </body>
 </html>
