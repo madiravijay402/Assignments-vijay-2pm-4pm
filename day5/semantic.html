@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2,h3{
+            text-align: center;
+        }
+        img{
+            display: block; 
+            /* Because images are inline elements normally.
+
+Inline elements cannot use margin:auto for centering.
+
+So we convert it into a block: */
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.Create a simple semantic layout with header, main, and footer</h1>
+    <header>
+        <h3>starring</h3>
+        <h2>Mahesh Babu</h2>
+    </header>
+    <main>
+        <h1>Vaaranaasi</h1>
+        <img src="./Varanasi.webp" alt="">
+    </main>
+    <footer>
+        <span style="display: inline-block; margin-left: 250px; margin-right: 50px;">
+         <h3>directed by</h3>
+        <h2>S.S rajamouli</h2>
+        </span>
+        <span style="display: inline-block; margin-right: 50px;">
+        <h3>Music by</h3>
+        <h2>M.M.Keeravani</h2>
+        </span>
+        <span style="display: inline-block; margin-right: 50px;">
+            <h3>cinematographer</h3>
+            <h2>p.s.vinodh</h2>
+        </span>
+        <span style="display: inline-block;margin-right: 50px;">
+            <h3>Produced by</h3>
+            <h2>Sri Durga Arts</h2>
+        </span>
+        <span style="display: inline-block;">
+            <h3>produced by</h3>
+            <h2>S.S.Karthikeya</h2>
+        </span>
+    </footer>
+</body>
+</html>
