@@ -37,3 +37,15 @@ h1,h2,h3{
     margin: 25px;
     padding: 5px;
 }
+
+#user{
+    border: 2px solid rgb(183, 20, 20);
+}
+input[type="password"]{
+    border: 2px solid rgb(20, 112, 183);
+}
+form{
+    background-color: lightcyan;
+    border: 2px solid rgb(20, 137, 183);
+    width: fit-content;
+}
