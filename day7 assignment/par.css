@@ -27,3 +27,13 @@ input[type="checkbox"]{
     height: 25px;
     background-color: lightcoral;
 }
+h1,h2,h3{
+    color: darksalmon;
+}
+.rar{
+    color: rgb(17, 1, 1);
+}
+*{
+    margin: 25px;
+    padding: 5px;
+}
