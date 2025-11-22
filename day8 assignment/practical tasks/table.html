@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pricing table</title>
     <style>
+        body{
+            text-align: center;
+            margin-top: 20%;
+            background-image: url(og.jpg);
+        }
         .a{
+            background-color: antiquewhite;
+            text-align: center;
             border: 2px solid black;
             width: fit-content;
-            margin: 0 auto;
+            display: inline-block;
+            margin-right: 20px;
+            margin-left: 50px;
             border-radius: 20px;
+            padding: 10px;
+        }
+        .b{
+            background-color: antiquewhite;
+            border: 2px solid blue;
+            width: fit-content;
+            display: inline-block;
+            border-radius: 20px;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        .c{
+            background-color: antiquewhite;
+            border: 2px solid red;
+            width: fit-content;
+           display: inline-block;
+            border-radius: 20px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>prcing table of netflix</h1>
-    <div class="a">
+    <h1 style="font-size: 100px; color: rgb(158, 15, 15);">pricing table of netflix</h1>
+    <div class="main">
+    <span>
+        <div class="a">
         <ul>
-            <h3>basic</h3>
+            <h3 style="background-color: rgb(167, 196, 226); text-align: center;">basic</h3>
             <li>price:149rs</li>
             <li>480p quality</li>
-            <li>single user</li>
-            <button type="button">join</button>
+            <li>single user</li><br>
+            <button type="button" style="background-color: blue;" >join</button>
         </ul>
     </div>
-    <div class="b">
+    </span>
+    <span>
+        <div class="b">
         <ul>
             <h3>standard</h3>
             <li>price:399rs</li>
@@ -33,7 +64,9 @@
             <button type="button">join</button>
         </ul>
     </div>
-    <div class="c">
+    </span>
+    <span>
+        <div class="c">
         <ul>
             <h3>premium</h3>
             <li>price:649rs</li>
@@ -41,6 +74,8 @@
             <li>4 user</li>
             <button type="button">join</button>
         </ul>
+    </div>
+    </span>
     </div>
 </body>
 </html>
