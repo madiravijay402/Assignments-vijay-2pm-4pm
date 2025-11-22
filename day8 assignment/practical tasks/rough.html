@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing Table — Boxes with Different Borders</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card-bg:#ffffff;
+      --accent:#4f46e5;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg) 0%, #eef2ff 100%);
+      color:#111827;
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      padding:48px 16px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:1100px;
+    }
+
+    h1{
+      text-align:center;
+      margin:0 0 24px 0;
+      font-size:28px;
+      letter-spacing:-0.02em;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+    }
+
+    /* Base card */
+    .card{
+      background:var(--card-bg);
+      padding:24px;
+      border-radius:12px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      min-height:320px;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(15,23,42,0.08)}
+
+    .title{font-weight:600;font-size:18px}
+    .price{font-size:32px;font-weight:700}
+    .desc{color:var(--muted);font-size:14px}
+    .features{list-style:none;padding:0;margin:8px 0 0 0;flex:1}
+    .features li{padding:8px 0;border-top:1px solid #f3f4f6;font-size:14px}
+    .cta{
+      display:inline-block;padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:white;text-decoration:none;font-weight:600;text-align:center
+    }
+
+    /* Different border styles */
+    /* 1. Dotted border */
+    .border-dotted{border:3px dotted #7c3aed}
+
+    /* 2. Double border */
+    .border-double{border:6px double #0ea5a4}
+
+    /* 3. Gradient border via pseudo-element */
+    .border-gradient{position:relative;padding:22px;border-radius:14px}
+    .border-gradient::before{
+      content:"";position:absolute;inset:0;padding:2px;border-radius:16px;pointer-events:none;
+      background:linear-gradient(135deg,#fb7185 0%, #f97316 40%, #f59e0b 65%, #10b981 100%);
+      -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+    /* inside card background to appear above the border's mask */
+    .border-gradient .inner{
+      background:var(--card-bg);border-radius:12px;padding:0;min-height:100%;
+    }
+
+    /* 4. Thick contrasting border with big radius */
+    .border-thick{border:8px solid #111827;border-radius:20px;color:#111827}
+
+    /* small responsive tweaks */
+    @media (max-width:520px){
+      .price{font-size:26px}
+      body{padding:28px 12px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pricing plans — boxes with different borders</h1>
+    <div class="grid">
+
+      <!-- Dotted border card -->
+      <section class="card border-dotted" aria-labelledby="basic-title">
+        <div>
+          <div class="title" id="basic-title">Basic</div>
+          <div class="desc">Great for personal projects</div>
+        </div>
+        <div class="price">₹0<span style="font-size:14px;font-weight:500"> /mo</span></div>
+        <ul class="features">
+          <li>Up to 3 projects</li>
+          <li>Community support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <div>
+          <a class="cta" href="#">Get Started</a>
+        </div>
+      </section>
+
+      <!-- Double border card -->
+      <section class="card border-double" aria-labelledby="pro-title">
+        <div>
+          <div class="title" id="pro-title">Pro</div>
+          <div class="desc">For freelancers and small teams</div>
+        </div>
+        <div class="price">₹499<span style="font-size:14px;font-weight:500"> /mo</span></div>
+        <ul class="features">
+          <li>Unlimited projects</li>
+          <li>Priority support</li>
+          <li>Advanced analytics &amp; export</li>
+        </ul>
+        <div>
+          <a class="cta" href="#">Choose Pro</a>
+        </div>
+      </section>
+
+      <!-- Gradient border card (uses inner wrapper) -->
+      <section class="card border-gradient" aria-labelledby="team-title">
+        <div class="inner">
+          <div>
+            <div class="title" id="team-title">Team</div>
+            <div class="desc">Best value for growing teams</div>
+          </div>
+          <div class="price">₹999<span style="font-size:14px;font-weight:500"> /mo</span></div>
+          <ul class="features">
+            <li>Everything in Pro</li>
+            <li>Team seats and roles</li>
+            <li>SLA &amp; onboarding</li>
+          </ul>
+          <div>
+            <a class="cta" href="#">Start Free Trial</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thick border card -->
+      <section class="card border-thick" aria-labelledby="ent-title">
+        <div>
+          <div class="title" id="ent-title">Enterprise</div>
+          <div class="desc">Custom plans for large organisations</div>
+        </div>
+        <div class="price">Custom</div>
+        <ul class="features">
+          <li>Dedicated account manager</li>
+          <li>Custom integrations</li>
+          <li>Enterprise SLAs</li>
+        </ul>
+        <div>
+          <a class="cta" href="#">Contact Sales</a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
