@@ -3,7 +3,6 @@
     display: flex;
     gap: 20px;
 }
-.na dd{
-    display: flex;
+.dd li{
     border: 2px solid black;
 }

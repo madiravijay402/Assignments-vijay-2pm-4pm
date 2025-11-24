@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .av{
+        border: 4px solid green;
+    }
+    .cj{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+        justify-content: space-between;
+    }
+    .vj{
+        display: flex;
+        
+        justify-content: center;
+        gap: 20px;
+    }
+    .vj div{
+        display: flex;
+        border: 2px solid beige;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 30px;
+        width: 100px;
+        background-color: beige;
+    }
+    </style>
+</head>
+<body>
+    <h1>Make a 3-item card row where items have equal width and 20px gap.</h1>
+    <nav class="av">
+        <ul class="cj">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+    </nav><br>
+    <nav class="vj">
+        <div>
+            col1
+        </div>
+        <div>col2</div>
+        <div>col3</div>
+    </nav>
+</body>
+</html>
