@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Centered Horizontal Nav</title>
+  <style>
+    /* 60px bar, items centered horizontally & vertically */
+    nav {
+      height: 60px;
+      background: #222;
+      display: flex;
+      justify-content: center; /* center items horizontally */
+      align-items: center;     /* center items vertically */
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;         /* spacing between items */
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: center; /* ensures inline centering of list children */
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 6px 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* optional: hover/focus for accessibility */
+    nav a:focus,
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
