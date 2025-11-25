@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         ul{
             display: flex;
@@ -18,12 +21,18 @@
 <body>
     <h1>Responsive Pricing Cards — Create a 3-column pricing section that becomes a single column on small screens. Use gap and flex-direction media queries. Add CTA buttons centered inside each card.</h1>
     <nav>
-        <ul>
-            <li>shirt</li>
-            <li>pant</li>
-            <li>t-shirt</li>
+        <ul class="ci">
+            <li>shirt
+                <li>499rs</li>
+                <label for="checkbox">red</label>
+                <input type="checkbox" name="red">
+                <label for="checkbox">blue</label>
+                <input type="checkbox" name="blue">
+            </li>
         </ul>
-        
+        <ul>
+
+        </ul>
     </nav>
 </body>
 </html>
