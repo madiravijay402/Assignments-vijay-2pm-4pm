@@ -43,11 +43,43 @@
         color: var(--text);
         font-weight: bold;
         text-transform: uppercase;
+        border: 2px solid #a8a0a0;
+        border-radius: 20%;
         background: linear-gradient(to right,#e5e4f7,#0c22eb);
-        padding: 10px;
+        padding: .2rem .500rem;
+       }
+       section{
+        background-color: #0c22eb;
+        opacity: 90%;
+        border: 2px solid black;
        }
        h2{
         color: var(--headr);
+       }
+       @media(hover: hover){
+        .nav-link:hover{
+            background-color: yellow;
+        }
+       }
+       @media(hover: none){
+        .head:active{
+            background-color: #eb0c0c;
+        }
+       }
+       @media (min-width:400px){
+        .pic{
+            background-color: brown;
+        }
+        .pic div{
+            background-color: #56cc0c;
+        }
+       }
+       @media (min-width:600px){
+        section{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+        }
        }
     </style>
 </head>
@@ -62,7 +94,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="pic">
             <div>
                 <picture>
                     <source media="(min-width: 720px)" srcset="https://share.google/images/EwgoOKuyihI7KP9Yt">
