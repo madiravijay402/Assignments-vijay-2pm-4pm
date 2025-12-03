@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            gap: 20px;
+            padding: 20px;
+            
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            align-items: center;
+        }
+        .oc{
+            display: grid;
+            grid-column: span 3;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            font-size: 100px;
+            box-sizing: border-box;
+            padding: 10px 40px;
+            background-color: aliceblue;
+            border-radius: 5%;
+        }
+        .cc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #0c7c62;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border-radius: 20%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            transition: ease-in,;
+        }
+        .e{
+            margin-top: 20px;
+        }
+        @media(max-width:360) and (max-height:740){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="oc" style="border-radius: 0%;">
+            online class
+        </div>
+        <div class="cc">full stack
+            <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            devops <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            data analytics <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            cyber security <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            ui/ux design <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+             <strong>quantum</strong>computing <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+            linux <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+            digital marketing <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+    </header>
+</body>
+</html>
