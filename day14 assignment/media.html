@@ -5,11 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-        
+       :root{
+        --gap:1rem;
+        --max-width:1200px;
+        --brand:#d3f0ff;
+        --bg:#eee;
+        --text:#000000;
+        --headr:#ff8f07;
+       }
+       *{
+        box-sizing: border-box;
+       }
+       body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        color: var(--text);
+        background-color: var(--bg);
+        line-height: 1.4;
+       }
+       .container{
+        padding: 1rem;
+        background-color: var(--brand);
+        margin: 20px 20px 20px 20px;
+       }
+       .head{
+        background-color: var(--bg);
+        border-radius: 20%;
+        padding: var(--gap);
+       }
+       .nav-link{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+       }
+       .nav-link a{
+        text-decoration: none;
+        color: var(--text);
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(to right,#e5e4f7,#0c22eb);
+        padding: 10px;
+       }
+       h2{
+        color: var(--headr);
+       }
     </style>
 </head>
 <body>
+    <div class="container">
     <header class="head">
         <nav class="nav-link">
         <a href="">home</a>
@@ -22,9 +65,10 @@
         <section>
             <div>
                 <picture>
-                    <source media="(min-width: 720px)" srcset="">
-                    <source media="(min-width: 480px )" srcset="">
-                    <source media="(min-width: 1080px)" srcset="">
+                    <source media="(min-width: 720px)" srcset="https://share.google/images/EwgoOKuyihI7KP9Yt">
+                    <source media="(min-width: 480px )" srcset="https://share.google/images/EwgoOKuyihI7KP9Yt">
+                    <source media="(min-width: 1080px)" srcset="https://share.google/images/EwgoOKuyihI7KP9Yt">
+                    <img src="og.jpg" alt="">
                 </picture>
             </div>
         </section>
@@ -52,5 +96,6 @@
     <footer>
        <p>&copy; all rights reserved for this document.</p>
     </footer>
+    </div>
 </body>
 </html>
