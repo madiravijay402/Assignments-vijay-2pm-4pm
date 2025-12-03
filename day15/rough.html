@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: #e9f4ff;
+        }
+
         .container{
             gap: 20px;
             padding: 20px;
-            
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr); /* desktop: 3 columns */
             justify-content: center;
             align-items: center;
         }
+
         .oc{
             display: grid;
             grid-column: span 3;
@@ -24,80 +34,79 @@
             font-size: 100px;
             box-sizing: border-box;
             padding: 10px 40px;
-            background-color: aliceblue;
+            background: linear-gradient(135deg,#9b5bff,#ff4fd4);
+            color: #fff;
             border-radius: 5%;
         }
+
         .cc{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #057b32;
+            background-color: #6b3cf5;
+            color: #fff;
             width: 200px;
             height: auto;
             padding: 20px;
-            border-radius: 10%;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            opacity: 90%;
-            transition: background-color 200ms ease, transform 200ms ease,box-shadow 200ms ease;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            opacity: 0.9;
+            transition: background-color 200ms ease,
+                        transform 200ms ease,
+                        box-shadow 200ms ease;
         }
+
         .cc:hover{
-            background-color: #08ea5f;
-            transform:translateY(-4px)scale(1);
+            background-color: #8c5fff;
+            transform: translateY(-4px) scale(1);
             box-shadow: 2px 2px 10px #636060;
         }
+
         .e{
-            margin-top: 20px;
+            margin-top: 10px;
         }
+
+        /*   MOBILE LAYOUT  */
         @media (max-width: 768px) {
+
             body{
-                background-color: aliceblue;
                 display: flex;
                 justify-content: center;
                 padding: 20px;
+                background: #4a2ddc;
             }
-    .container{
-        display: grid;
-        grid-template-columns: 1fr;
-        
-        width: 100%;
-        gap: 16px;
-        margin: 10px;
-        justify-items: center;
-    }
 
-    .oc{
-        font-size: 28px;                  /* mobile friendly */
-        padding: 20px 16px;
-        text-align: left;
-        border-radius: 20px;
-        background: linear-gradient(135deg,#8c4bff,#c049ff);
-        color: #fff;
-    }
+            .container{
+                max-width: 360px;        /* phone width */
+                width: 100%;
+                background: #ffffff;
+                border-radius: 24px;
+                padding: 16px;
+                gap: 14px;
+            }
 
-    .cc{
-        width: 100%;                      /* full width card */
-        max-width: none;
-        margin: 0;                        /* we use grid gap only */
-        padding: 16px 20px;
-        border-radius: 16px;
-        background: #6730e3;              /* card color */
-        align-items: flex-start;          /* text left */
-        color: #fff;
-        box-shadow: none;
-    }
+            .oc{
+                grid-column: 1 / -1;     /* full row */
+                font-size: 28px;
+                padding: 18px 16px;
+                border-radius: 20px;
+                text-align: left;
+            }
 
-    .cc:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    }
+            .cc{
+                grid-column: 1 / -1;     /*  FULL ROW – one card per line */
+                width: 100%;
+                margin: 0;
+                padding: 14px 18px;
+                border-radius: 16px;
+                align-items: flex-start;
+            }
 
-    .e{
-        margin-top: 8px;
-    }
-}
-
+            .e{
+                margin-top: 6px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,7 +135,7 @@
             <button class="e" type="button">enroll</button>
         </div>
         <div class="cc">
-             <strong>quantum</strong>computing <br>
+            <strong>quantum</strong> computing <br>
             <button class="e" type="button">enroll</button>
         </div>
         <div class="cc">
