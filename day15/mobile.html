@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: #e9f4ff;
+        }
+
+        .container{
+            gap: 20px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr); /* desktop: 3 columns */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .oc{
+            display: grid;
+            grid-column: span 3;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            font-size: 100px;
+            box-sizing: border-box;
+            padding: 10px 40px;
+            background: linear-gradient(135deg,#9b5bff,#ff4fd4);
+            color: #fff;
+            border-radius: 5%;
+        }
+
+        .cc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #6b3cf5;
+            color: #fff;
+            width: 200px;
+            height: auto;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            opacity: 0.9;
+            transition: background-color 200ms ease,
+                        transform 200ms ease,
+                        box-shadow 200ms ease;
+        }
+
+        .cc:hover{
+            background-color: #8c5fff;
+            transform: translateY(-4px) scale(1);
+            box-shadow: 2px 2px 10px #636060;
+        }
+
+        .e{
+            margin-top: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+
+            body{
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                background: #4a2ddc;
+            }
+
+            .container{
+                max-width: 360px;        
+                width: 100%;
+                background: #ffffff;
+                border-radius: 24px;
+                padding: 16px;
+                gap: 14px;
+            }
+
+            .oc{
+                grid-column: 1 / -1;     
+                font-size: 28px;
+                padding: 18px 16px;
+                border-radius: 20px;
+                text-align: left;
+            }
+
+            .cc{
+                grid-column: 1 / -1;    
+                width: 100%;
+                margin: 0;
+                padding: 14px 18px;
+                border-radius: 16px;
+                align-items: flex-start;
+            }
+
+            .e{
+                margin-top: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="oc" style="border-radius: 0%;">
+            online class
+        </div>
+        <div class="cc">full stack
+            <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            devops <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            data analytics <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            cyber security <br>
+            <button type="button" class="e">enroll</button>
+        </div>
+        <div class="cc">
+            ui/ux design <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+            <strong>quantum</strong> computing <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+            linux <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+        <div class="cc">
+            digital marketing <br>
+            <button class="e" type="button">enroll</button>
+        </div>
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        @media(max-width:700px){
+            body{
+                display: block;
+            }
+            #menuToggle{
+            display: none;
+        }
+        .bar{
+            background-color: antiquewhite;
+            border: 2px solid #dad4d4;
+            font-size: 30px;
+            padding: 20px 10px;
+        }
+        nav{
+            display: none;
+            padding: 10px;
+            background-color: #eee;
+        }
+         #menuToggle:checked ~ nav {
+            display: block;
+        }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menuToggle">
+    <label for="menuToggle" class="bar">|||</label>
+
+    <nav>
+        <a href="">.net</a><br>
+        <a href="">python</a><br>
+        <a href="">java</a> <br>
+        <a href="">mern</a><br>
+    </nav>
+</body>
+</html>
