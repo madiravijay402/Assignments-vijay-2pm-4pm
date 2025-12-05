@@ -10,9 +10,10 @@
         }
         header{
             text-align: center;
-            border: 1px solid black;
+            border: 1px solid rgb(225, 221, 221);
             margin: 20px 20px 20px 20px;
             background: linear-gradient(to right,#eee,#2ae7dd);
+            border-radius: 5%;
         }
         h1{
             font-size: 100px;
@@ -21,20 +22,55 @@
             font-weight: lighter;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             
+        }  
+        .links{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
         }
-        
+        .links a{
+            text-decoration: none;
+        }
+        .links a button{
+            width: fit-content;
+            display: flex;
+            padding: 10px 20px;
+        }
+        .links a button img{
+            width: 20px;
+        }
+        .container2{
+            margin-top: 100px;
+        }
+        .ab{
+            font-size: 49px;
+        }
     </style>
 </head>
 <body>
+    <div class="container1">
     <header>
         <h1>MADIRA VIJAY</h1> 
         <h2>frontend developer||computer science graduate || looking for great opportunites</h2>
     </header>
-    <div>
+    <div class="links">
     <a href="Madira Vijay (4).pdf" download="MAdira Vijay's Resume">
         <button>Resume</button>
     </a>
+    <a href="https://github.com/madiravijay402">
+        <button><img src="GitHub-Mark-ea2971cee799.png" alt=""></button>
+    </a>
+    <a href="https://www.linkedin.com/in/vijay-madira-661982285">
+        <button><img src="images.png" alt=""></button>
+    </a>
+    <a href="mailto:vijaymadira681@gmail.com">
+        <button><img src="pngtree-email-icon-png-image_5065641.jpg" alt=""></button>
+    </a>
     </div>
-    
+    </div>
+    <div class="container2">
+        <h1 class="ab" style="text-align: center;">About Me</h2>
+    </div>
 </body>
 </html>
