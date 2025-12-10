@@ -27,7 +27,7 @@ else{
 
 // switch 
 //  good for fixed option
-let day=1;
+let day=5;
 switch(day){
     case 1:
         console.log("monday");
@@ -41,3 +41,5 @@ switch(day){
     default:
     console.log("invalid day");   
 }
+
+
