@@ -1,0 +1,263 @@
+<!--
+Smart Hotel Recommender - Single-file HTML/CSS/JS
+Usage:
+  1. Copy this entire file and save as `smart-hotel-recommender.html`
+  2. Open it in your browser (double-click)
+
+Features included (simple, easy-to-read code):
+  - Mock hotel dataset (in JS array)
+  - Search by city/name, filters (price range, min rating, amenities)
+  - Simple scoring-based recommender (matches + rating + price)
+  - Results displayed as cards
+  - "Save favorite" using localStorage
+  - Clear comments so you can modify easily
+
+If you want: I can add CSV import, JSON API hookup, or a backend later.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Hotel Recommender</title>
+  <style>
+    :root{ --accent:#0066cc; --muted:#666; --card:#fff; --bg:#f4f7fb }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); margin:0; color:#111}
+    .container{max-width:1100px; margin:28px auto; padding:20px}
+    header{display:flex;align-items:center;gap:18px}
+    header h1{margin:0;font-size:20px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(20,20,40,0.06);padding:16px}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-top:18px}
+    .filters{position:sticky;top:18px}
+
+    label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+    input[type=text], select, input[type=number], .range{width:100%;padding:8px;border-radius:8px;border:1px solid #ddd}
+    input[type=checkbox]{margin-right:8px}
+    button{background:var(--accent);color:white;border:none;padding:10px 12px;border-radius:8px;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid #ddd;color:#333}
+
+    /* results */
+    .results{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+    .hotel-card{display:flex;gap:12px;align-items:flex-start}
+    .hotel-img{width:110px;height:80px;border-radius:8px;background:#e7eefc;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#8aa}
+    .hotel-info{flex:1}
+    .hotel-title{font-weight:600;margin:0 0 6px}
+    .meta{font-size:13px;color:var(--muted)}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid #eee}
+
+    .fav{background:transparent;border:none;cursor:pointer;font-size:18px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    @media (max-width:760px){ .grid{grid-template-columns:1fr} .filters{position:static} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="card" style="display:flex;align-items:center;gap:12px;padding:10px 14px;">
+        <div style="width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#004b99);display:flex;align-items:center;justify-content:center;color:white;font-weight:700">SH</div>
+        <div>
+          <h1>Smart Hotel Recommender</h1>
+          <div style="font-size:13px;color:var(--muted)">Search, filter & get recommended hotels (demo)</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="filters card">
+        <div>
+          <label for="q">Search city or hotel name</label>
+          <input id="q" type="text" placeholder="e.g., Hyderabad or Taj" />
+
+          <label for="minRating">Minimum rating (1-5)</label>
+          <select id="minRating">
+            <option value="0">Any</option>
+            <option value="4">4+</option>
+            <option value="3">3+</option>
+            <option value="2">2+</option>
+          </select>
+
+          <label>Max price per night (INR)</label>
+          <input id="maxPrice" type="number" min="0" placeholder="e.g., 4000" />
+
+          <label>Amenities</label>
+          <div>
+            <label><input type="checkbox" value="wifi" class="amen" /> Free Wifi</label>
+            <label><input type="checkbox" value="breakfast" class="amen" /> Breakfast</label>
+            <label><input type="checkbox" value="pool" class="amen" /> Pool</label>
+            <label><input type="checkbox" value="parking" class="amen" /> Parking</label>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <button id="apply">Apply</button>
+            <button id="reset" class="btn-ghost">Reset</button>
+          </div>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #f0f2f6" />
+        <div style="font-size:13px;color:var(--muted)">Favorites are saved locally in your browser.</div>
+      </aside>
+
+      <main>
+        <div class="card" style="padding:12px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <strong id="resultCount">0</strong> hotels found • <span id="recommendationNote">Showing best matches</span>
+          </div>
+          <div>
+            <input id="sort" type="text" placeholder="Type: price | rating | score" style="width:190px;padding:8px;border-radius:8px;border:1px solid #ddd" />
+          </div>
+        </div>
+
+        <div id="results" class="results"></div>
+
+        <footer>
+          Tip: This is a front-end demo. Want a backend (Node/Python) to serve real hotels? Tell me and I will add it.
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Mock dataset (you can replace this with real API data)
+    const hotels = [
+      {id:1, name:'Taj King', city:'Hyderabad', price:7200, rating:4.6, amenities:['wifi','breakfast','parking'], img:'T1'},
+      {id:2, name:'Lake View Inn', city:'Hyderabad', price:3500, rating:4.1, amenities:['wifi','breakfast'], img:'L1'},
+      {id:3, name:'Budget Stay', city:'Vijayawada', price:1200, rating:3.8, amenities:['wifi','parking'], img:'B1'},
+      {id:4, name:'Royal Comfort', city:'Chennai', price:5200, rating:4.4, amenities:['wifi','pool','breakfast'], img:'R1'},
+      {id:5, name:'Seaside Resort', city:'Pondicherry', price:8800, rating:4.8, amenities:['wifi','pool','breakfast','parking'], img:'S1'},
+      {id:6, name:'City Lodge', city:'Hyderabad', price:2600, rating:3.9, amenities:['wifi'], img:'C1'},
+      {id:7, name:'Green Leaf', city:'Bengaluru', price:4100, rating:4.2, amenities:['wifi','breakfast','parking'], img:'G1'},
+      {id:8, name:'Comfort Plus', city:'Hyderabad', price:4800, rating:4.0, amenities:['wifi','breakfast'], img:'CP1'}
+    ];
+
+    // Utilities
+    const el = sel => document.querySelector(sel);
+    const els = sel => Array.from(document.querySelectorAll(sel));
+
+    // Load favorites from localStorage
+    const favKey = 'sh_recommender_favs_v1';
+    const favorites = new Set(JSON.parse(localStorage.getItem(favKey) || '[]'));
+
+    function saveFavs(){ localStorage.setItem(favKey, JSON.stringify(Array.from(favorites))) }
+
+    // Recommendation scoring function (simple and explainable)
+    // score = city/name match bonus + rating*20 - priceFactor + amenities match
+    function scoreHotel(h, q, wantedAmenities, maxPrice, minRating){
+      q = (q || '').toLowerCase().trim();
+      let score = 0;
+      if(q){
+        if(h.city.toLowerCase() === q) score += 60; // exact city match
+        if(h.name.toLowerCase().includes(q)) score += 30; // name match
+        if(h.city.toLowerCase().includes(q)) score += 20; // partial city string
+      }
+      // rating matters
+      score += h.rating * 12; // e.g., 4.5 -> 54
+
+      // price: cheaper gets small bonus
+      if(maxPrice){
+        const priceFactor = Math.max(0, (maxPrice - h.price) / Math.max(1, maxPrice));
+        score += priceFactor * 40; // up to 40 points
+      } else {
+        score += (2000 / (h.price + 2000)) * 8; // a small default boost for cheap
+      }
+
+      // amenities match
+      let amenMatches = 0;
+      for(const a of wantedAmenities){ if(h.amenities.includes(a)) amenMatches++ }
+      score += amenMatches * 14;
+
+      // minRating filter penalizes below-min
+      if(minRating && h.rating < minRating) score -= 200;
+
+      return Math.round(score*10)/10;
+    }
+
+    function renderResults(list){
+      const container = el('#results');
+      container.innerHTML = '';
+      el('#resultCount').textContent = list.length;
+      if(list.length === 0){ container.innerHTML = '<div class="card">No hotels found — try loosening filters.</div>'; return }
+
+      list.forEach(item => {
+        const div = document.createElement('div'); div.className='card hotel-card';
+        div.innerHTML = `
+          <div class="hotel-img">${item.img}</div>
+          <div class="hotel-info">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div>
+                <div class="hotel-title">${item.name}</div>
+                <div class="meta">${item.city} • ₹${item.price} / night • ⭐ ${item.rating}</div>
+              </div>
+              <div>
+                <button class="fav" data-id="${item.id}" title="Toggle favorite">${favorites.has(item.id)?'💖':'🤍'}</button>
+              </div>
+            </div>
+            <div class="tags">
+              ${item.amenities.map(a => `<span class="tag">${a}</span>`).join('')}
+            </div>
+          </div>
+        `;
+
+        // attach fav handler
+        div.querySelector('.fav').addEventListener('click', (e)=>{
+          const id = item.id;
+          if(favorites.has(id)) favorites.delete(id); else favorites.add(id);
+          saveFavs();
+          runSearch(); // re-render to update icon
+        })
+
+        container.appendChild(div);
+      })
+    }
+
+    function getFilters(){
+      const q = el('#q').value;
+      const minRating = Number(el('#minRating').value) || 0;
+      const maxPriceVal = Number(el('#maxPrice').value) || null;
+      const wantedAmenities = els('.amen:checked').map(n=>n.value);
+      const sort = el('#sort').value.trim().toLowerCase();
+      return {q,minRating,maxPriceVal,wantedAmenities,sort};
+    }
+
+    function runSearch(){
+      const {q,minRating,maxPriceVal,wantedAmenities,sort} = getFilters();
+      let list = hotels.slice();
+
+      // filter by price and rating
+      list = list.filter(h => {
+        if(maxPriceVal && h.price > maxPriceVal) return false;
+        if(minRating && h.rating < minRating) return false;
+        // amenities filter: must include all selected
+        for(const a of wantedAmenities) if(!h.amenities.includes(a)) return false;
+        return true;
+      });
+
+      // compute score
+      list = list.map(h => ({...h, score: scoreHotel(h, q, wantedAmenities, maxPriceVal, minRating)}));
+
+      // sort by score by default
+      if(sort === 'price') list.sort((a,b)=>a.price-b.price);
+      else if(sort === 'rating') list.sort((a,b)=>b.rating-a.rating);
+      else list.sort((a,b)=>b.score-a.score);
+
+      renderResults(list);
+    }
+
+    // Events
+    el('#apply').addEventListener('click', runSearch);
+    el('#reset').addEventListener('click', ()=>{
+      el('#q').value=''; el('#minRating').value='0'; el('#maxPrice').value=''; els('.amen').forEach(n=>n.checked=false); el('#sort').value=''; runSearch();
+    });
+
+    // run initial
+    runSearch();
+
+  </script>
+</body>
+</html>
