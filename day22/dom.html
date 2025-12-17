@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="stf"></ul>
+    <button onclick="fasak()">hi</button>
+    <button onclick="removeobject()">bye</button>
+    <script>
+        function fasak(){
+        let ul=document.getElementById("stf")
+        let li=document.createElement("li")
+        li.textContent="hello evry one"
+        ul.appendChild(li);
+        }
+        function removeobject(){
+            let ul=document.getElementById("stf")
+            if(ul.lastChild){
+                ul.removeChild(ul.lastChild)
+            }
+        }
+    </script>
+</body>
+</html>
