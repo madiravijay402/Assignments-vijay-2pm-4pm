@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cp" placeholder="enterproductname">
+    <button onclick="search()">search</button>
+    <p id="output"></p>
+    <script>
+        let products=["laptop","tablet","earbuds","smartphone"]
+        function search(){
+            let a= document.getElementById("cp")
+            let out=document.getElementById("output");
+            if(products.includes(a.value)){
+            out.innerText="available";
+        } 
+        else{
+            out.innerText="not available"
+        }
+        }
+//         let pdt=["laptop","tablet","earbuds","smartphone"]
+// pdt.forEach(it=>{
+//     console.log(it);
+// })
+    </script>
+</body>
+</html>

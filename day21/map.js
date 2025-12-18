@@ -6,4 +6,5 @@ a.map(function(num){
     console.log(num*num*num);
 })
 const nm=[23,190,21,51,70,9,12]
-nm.filter(function(num))
+const cm= nm.filter(function(num){return num>50})
+console.log(cm);
