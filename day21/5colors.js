@@ -1,0 +1,11 @@
+let a=["red","green","blue","voilet","pink"];
+let b=a.length;
+console.log(`${a[0]} & ${a[b-1]}`);
+a.push("brown");
+console.log(a);
+a.pop();
+console.log(a);
+a.shift();
+console.log(a);
+a.unshift("red");
+console.log(a);
