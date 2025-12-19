@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ug"></ul>
+    <button onclick="vasi()">add</button>
+    <button onclick="remove()">remove</button>
+    <script>
+        let c=["vijay","tanoj","teja"]
+        function vasi(){
+            let a=document.getElementById("ug");
+            for(let i=0;i<c.length;i++){
+                 let b=document.createElement("li");
+                b.innerText="hello" + c[i];
+                a.appendChild(b)
+            } // one click three items will be added   for single child use if
+        }
+        function remove(){
+            let a=document.getElementById("ug");
+           if(a.firstElementChild){
+            a.removeChild(a.firstElementChild)
+           }
+        }
+    </script>
+</body>
+</html>
