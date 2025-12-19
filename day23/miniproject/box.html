@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #box {
+      width: 150px;
+      height: 150px;
+      background-color: gray;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+  const box=document.getElementById("box");
+  box.addEventListener("dblclick",()=>{
+    box.style.backgroundColor="fuchsia"
+  })
+  box.addEventListener("click",()=>{
+    box.style.backgroundColor="red"
+  })
+  box.addEventListener("mouseleave",()=>{
+    box.style.backgroundColor="green"
+  })
+</script>
+
+</body>
+</html>
