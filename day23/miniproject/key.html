@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="ke">Press any key...</p>
+
+<script>
+  const c = document.getElementById("ke");
+
+  document.addEventListener("keydown", (event) => {
+    c.innerHTML = `
+      Key : ${event.key} <br>
+      Key Code : ${event.keyCode}
+    `;
+  });
+</script>
 </body>
 </html>
