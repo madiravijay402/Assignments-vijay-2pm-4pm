@@ -1,4 +1,5 @@
-<!-- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,67 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="fm">
-        <label for="">name</label>
-        <input type="text" name="name" id="i1">
-        <label for="">email</label>
-        <input type="email" name="email" id="i2">
-        <button onclick="ck()">click</button>
-    </form>
+    <label for="">
+        name:
+        <input type="name" id="ni" name="name">
+    </label>
+    <label for="">
+        email:
+        <input type="email" id="em" name="email">
+    </label>
+    <h2>preview</h2>
+    <p id="outn"></p>
+    <p id="emout"></p>
     <script>
-        function ck(){
-            const f=document.getElementById("i1");
-        f.addEventListener("input",(event)=>{
-            console.log(event.target.value);
+        const nameInput=document.getElementById("ni");
+        const emailinput=document.getElementById("em");
+        const name=document.getElementById("outn");
+        const email=document.getElementById("emout");
+        nameInput.addEventListener("input",()=>{
+            name.innerText=nameInput.value;
         })
-        const g=document.getElementById("i2");
-        g.addEventListener("input",(event)=>{
-            console.log(event.target.value);
+        emailinput.addEventListener("change",()=>{
+            email.innerText=emailinput.value
         })
-        }
     </script>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Live Form Preview</title>
-</head>
-<body>
-
-<h3>Form</h3>
-<label>
-  Name:
-  <input type="text" id="name">
-</label><br><br>
-
-<label>
-  Email:
-  <input type="email" id="email">
-</label>
-
-<h3>Live Preview</h3>
-<p>Name: <span id="pname"></span></p>
-<p>Email: <span id="pemail"></span></p>
-
-<script>
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-
-  const pname = document.getElementById("pname");
-  const pemail = document.getElementById("pemail");
-
-  // input event → updates while typing
-  nameInput.addEventListener("input", () => {
-    pname.textContent = nameInput.value;
-  });
-
-  // change event → updates after focus out
-  emailInput.addEventListener("change", () => {
-    pemail.textContent = emailInput.value;
-  });
-</script>
-
 </body>
 </html>
