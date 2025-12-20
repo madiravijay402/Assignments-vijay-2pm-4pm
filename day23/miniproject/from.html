@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fm">
+        <label for="">name</label>
+        <input type="text" name="name" id="i1">
+        <label for="">email</label>
+        <input type="email" name="email" id="i2">
+        <button onclick="ck()">click</button>
+    </form>
+    <script>
+        function ck(){
+            const f=document.getElementById("i1");
+        f.addEventListener("input",(event)=>{
+            console.log(event.target.value);
+        })
+        const g=document.getElementById("i2");
+        g.addEventListener("input",(event)=>{
+            console.log(event.target.value);
+        })
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Form Preview</title>
+</head>
+<body>
+
+<h3>Form</h3>
+<label>
+  Name:
+  <input type="text" id="name">
+</label><br><br>
+
+<label>
+  Email:
+  <input type="email" id="email">
+</label>
+
+<h3>Live Preview</h3>
+<p>Name: <span id="pname"></span></p>
+<p>Email: <span id="pemail"></span></p>
+
+<script>
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+
+  const pname = document.getElementById("pname");
+  const pemail = document.getElementById("pemail");
+
+  // input event → updates while typing
+  nameInput.addEventListener("input", () => {
+    pname.textContent = nameInput.value;
+  });
+
+  // change event → updates after focus out
+  emailInput.addEventListener("change", () => {
+    pemail.textContent = emailInput.value;
+  });
+</script>
+
+</body>
+</html>
