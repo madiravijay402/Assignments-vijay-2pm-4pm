@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            width: fit-content;
+        }
+        .type{
+            font-weight: bolder;
+        }
+        li:not(.type){
+            display: none;
+        }
+        ul:hover li{
+            display: block;
+            cursor: pointer;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }   
+        .default{
+            background-color:wheat ;
+            color: brown;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul >
+        <li class="type">mode
+        </li>
+        <li id="a">dark</li>
+        <li id="b">light</li>
+        <li id="c">default</li>
+    </ul>
+    <script>
+        const dark=document.getElementById("a");
+        const light=document.getElementById("b");
+        const def=document.getElementById("c");
+        function clearModes(){
+            document.body.classList.remove("dark","light","default");
+        }
+            dark.addEventListener("click",()=>{
+                clearModes();
+            document.body.classList.toggle("dark");
+        })
+        light.addEventListener("click",()=>{
+            clearModes();
+            document.body.classList.toggle("light");
+        })
+        def.addEventListener("click",()=>{
+            clearModes();
+            document.body.classList.toggle("default");
+        })
+        
+    </script>
+</body>
+</html>

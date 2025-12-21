@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            transition: 0.3s;
+        }
+        #mode{
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            flex-direction: column;
+        }
+        .dark{
+            background-color: black;
+            color:white
+            }
+    </style>
+</head>
+<body>
+   <div id="mode" onclick="md()">mode</div>
+</body>
+<script>
+    let a=["dark","light","system"];
+    function md(){
+         const m=document.getElementById("mode");
+       for(let i=0;i<a.length;i++){
+        const b=document.createElement("li");
+        b.innerText=a[i];
+        m.appendChild(b);
+       }
+       
+    }
+</script>
+</html>
