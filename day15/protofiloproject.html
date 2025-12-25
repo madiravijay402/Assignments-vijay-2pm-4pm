@@ -60,10 +60,10 @@
         }
         .container2{
             width: 100%;
-            
+            min-height: 100vh; 
             display: grid;
             grid-template-columns: 500px 1fr;
-            background-color: #2ae7dd;
+            /* background-color: #2ae7dd; */
             padding: 20px 20px;
             justify-content: center;
             align-items: center;
@@ -71,6 +71,7 @@
             box-sizing: border-box;
         }
         .ab{
+            
             font-size: 49px;
         }
         .container2 .info{
@@ -95,6 +96,34 @@
         .container2 .img .pas{
             width: 240px;
 
+        }
+        .container3{
+            width: 100%;;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .s3{
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        li{
+            list-style-type: none;
+        }
+        .skils{
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 10px;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        .front.backend.database{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -129,6 +158,35 @@
                        <p class="p1">completed my B.E in computer science at saveetha school of engineering looking forward to contribute my skills to the real world 
                         </p>
                 </div>
+    </div>
+    <h2 class="s3">skills & technologies</h2>
+    <div class="container3">
+        <div class="skils">
+            <ul class="front">
+                <li>frontend</li>
+                <li>html5</li>
+                <li>css3</li>
+                <li>Javascript</li>
+                <li>rect.js</li>
+                <li>bootstrap</li>
+            </ul>
+        </div>
+        <div class="skils">
+          
+            <ul class="backend">
+                <li>backend</li>
+                <li>java</li>
+                <li>node.js</li>
+                <li>express</li>
+            </ul>
+        </div>
+        <div class="skils">
+            <ul class="database">
+                <li>Database</li>
+                <li>MongoDB</li>
+                <li>MYsql</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

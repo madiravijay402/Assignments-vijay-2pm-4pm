@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Vijay Madira</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .container1 {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      border: 1px solid #ddd;
+      margin: 20px;
+      padding: 20px;
+      background: linear-gradient(to right, #eee, #2ae7dd);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 64px;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .links a button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .links img {
+      width: 20px;
+    }
+
+    /* ---------- ABOUT SECTION ---------- */
+    .ab {
+      text-align: center;
+      font-size: 42px;
+      margin-top: 40px;
+    }
+
+    .container2 {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 30px;
+      padding: 40px;
+      align-items: center;
+    }
+
+    .img {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pas {
+      width: 220px;
+      border-radius: 10px;
+    }
+
+    .info {
+      border: 1px solid #aaa;
+      padding: 20px;
+    }
+
+    .p1 {
+      border: 1px solid #888;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* ---------- SKILLS SECTION ---------- */
+    .s3 {
+      text-align: center;
+      font-size: 36px;
+      margin: 40px 0 20px;
+    }
+
+    .container3 {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .skils {
+      border: 2px solid black;
+      padding: 20px;
+      width: 200px;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    ul li:first-child {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="container1">
+    <header>
+      <h1>MADIRA VIJAY</h1>
+      <h2>Frontend Developer | Computer Science Graduate | Open to Opportunities</h2>
+    </header>
+
+    <div class="links">
+      <a href="Madira Vijay (4).pdf" download>
+        <button>Resume</button>
+      </a>
+
+      <a href="https://github.com/madiravijay402" target="_blank">
+        <button><img src="GitHub-Mark-ea2971cee799.png" alt="GitHub"></button>
+      </a>
+
+      <a href="https://www.linkedin.com/in/vijay-madira-661982285" target="_blank">
+        <button><img src="images.png" alt="LinkedIn"></button>
+      </a>
+
+      <a href="mailto:vijaymadira681@gmail.com">
+        <button><img src="pngtree-email-icon-png-image_5065641.jpg" alt="Email"></button>
+      </a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <h1 class="ab">About Me</h1>
+
+  <div class="container2">
+    <div class="img">
+      <img src="passport photo.JPG" alt="Vijay Photo" class="pas">
+    </div>
+
+    <div class="info">
+      <p class="p1">
+        Hello, I am Vijay, a Computer Science graduate with a strong interest in future technologies.
+      </p>
+      <p class="p1">
+        I completed my B.E in Computer Science from Saveetha School of Engineering and I am eager to apply my skills in real-world projects.
+      </p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <h2 class="s3">Skills & Technologies</h2>
+
+  <div class="container3">
+    <div class="skils">
+      <ul>
+        <li>Frontend</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Bootstrap</li>
+      </ul>
+    </div>
+
+    <div class="skils">
+      <ul>
+        <li>Backend</li>
+        <li>Java</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+      </ul>
+    </div>
+
+    <div class="skils">
+      <ul>
+        <li>Database</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
