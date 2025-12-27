@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protofilo</title>
+    <style>
+        /* body{
+            line-height: 1px;
+        } */
+         /* .container1{
+            
+            width: 100%;
+           
+            min-height: 100vh;
+         } */
+          .container1{
+             width: 100%;
+             min-height: 100vh; 
+             /* one page line above line */
+             display: flex;
+             flex-direction: column;     
+             justify-content: center;    
+             align-items: center;        
+             /* box-sizing: border-box; */
+}
+
+        header{
+            text-align: center;
+            border: 1px solid rgb(225, 221, 221);
+            margin: 20px 20px 20px 20px;
+            background: linear-gradient(to right,#eee,#2ae7dd);
+            border-radius: 5%;
+        }
+        h1{
+            font-size: 100px;
+        }
+        h2{
+            font-weight: lighter;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }  
+        .links{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+            
+        }
+        .links a{
+            text-decoration: none;
+        }
+        .links a button{
+            width: fit-content;
+            display: flex;
+            padding: 10px 20px;
+        }
+        .links a button img{
+            width: 20px;
+        }
+        .container2{
+            width: 100%;
+            min-height: 100vh; 
+            display: grid;
+            grid-template-columns: 500px 1fr;
+            /* background-color: #2ae7dd; */
+            padding: 20px 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20px 20px 20px;
+            box-sizing: border-box;
+        }
+        .ab{
+            
+            font-size: 49px;
+        }
+        .container2 .info{
+            width: 100%;
+            
+            border: 1px solid black;
+            padding: 10px 10px;
+            gap: 20px;
+            box-sizing: border-box;
+        }
+        
+        .p1{
+            box-sizing: border-box;
+            border: 1px solid rgb(87, 82, 82);
+            padding: 20px 10px;
+        }
+        .container2 .img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container2 .img .pas{
+            width: 240px;
+
+        }
+        .container3{
+            width: 100%;;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .s3{
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        li{
+            list-style-type: none;
+        }
+        .skils{
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 10px;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        .front.backend.database{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+    <header>
+        <h1>MADIRA VIJAY</h1> 
+        <h2>frontend developer||computer science graduate || looking for great opportunites</h2>
+    </header>
+    <div class="links">
+    <a href="Madira Vijay (4).pdf" download="MAdira Vijay's Resume">
+        <button>Resume</button>
+    </a>
+    <a href="https://github.com/madiravijay402">
+        <button><img src="GitHub-Mark-ea2971cee799.png" alt=""></button>
+    </a>
+    <a href="https://www.linkedin.com/in/vijay-madira-661982285">
+        <button><img src="images.png" alt=""></button>
+    </a>
+    <a href="mailto:vijaymadira681@gmail.com">
+        <button><img src="pngtree-email-icon-png-image_5065641.jpg" alt="">email</button>
+    </a>
+    </div>
+    </div>
+            <h1 class="ab" style="text-align: center;">About Me</h2>
+    <div class="container2">
+                <div class="img">
+                    <img src="passport photo.JPG" alt="" class="pas">
+                </div>
+                <div class="info">
+                       <p class="p1"> hello i am vijay computer scince graduate , i am very passionate about future technologies </p>
+                       <p class="p1">completed my B.E in computer science at saveetha school of engineering looking forward to contribute my skills to the real world 
+                        </p>
+                </div>
+    </div>
+    <h2 class="s3">skills & technologies</h2>
+    <div class="container3">
+        <div class="skils">
+            <ul class="front">
+                <li>frontend</li>
+                <li>html5</li>
+                <li>css3</li>
+                <li>Javascript</li>
+                <li>rect.js</li>
+                <li>bootstrap</li>
+            </ul>
+        </div>
+        <div class="skils">
+          
+            <ul class="backend">
+                <li>backend</li>
+                <li>java</li>
+                <li>node.js</li>
+                <li>express</li>
+            </ul>
+        </div>
+        <div class="skils">
+            <ul class="database">
+                <li>Database</li>
+                <li>MongoDB</li>
+                <li>MYsql</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
