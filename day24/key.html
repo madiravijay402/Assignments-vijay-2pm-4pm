@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="press()" name="name">
+    <form onsubmit="sb(event)">
+        <label for="">aadhar no</label>
+        <input type="number" name="aadhar no" id="addr">
+        <label for="">address</label>
+        <input type="text" name="address">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        function press(){
+            alert("key pressed")
+        }
+        function sb(e){
+            e.preventDefault();
+            let adrs=document.getElementById("addr").value;
+            let count=adrs.length;
+            if(count===12){
+                alert("form submitted")
+            }
+            else{
+                alert("enter valid aadhar number");
+            }
+        }
+    </script>
+</body>
+</html>
