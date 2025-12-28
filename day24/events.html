@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="eve" style="width: 100px; height: 100px; border: 2px solid green;">hello</div>
+    <div id="parent">
+        parent
+        <div id="child">
+            child
+        </div>
+    </div>
+    <script>
+        let a=document.getElementById("eve")
+        a.addEventListener("dblclick",()=>{
+            a.style.width="200px";
+            a.style.backgroundColor="blue"
+        })
+        let b=document.getElementById("parent")
+        let c=document.getElementById("child")
+        let d=document.getElementById("parent")
+        c.addEventListener("click",()=>{
+            alert("child clicked")
+        })
+        d.addEventListener("click",()=>{
+            alert("parent clicked")
+        },true);
+    </script>
+</body>
+</html>
