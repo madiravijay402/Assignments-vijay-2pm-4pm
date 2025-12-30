@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="num1" placeholder="number 1" id="nm1">
+    <input type="number" name="num2" placeholder="number 2" id="nm2">
+    <select id="out">
+        <option value="">select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="cl()"></button>
+    <p id="output"></p>
+    <script>
+        function cl(){
+            let a=document.getElementById("nm1").value
+        let b=document.getElementById("nm2").value
+        let o=document.getElementById("out").value
+        let r=document.getElementById("output")
+        if(a===""||b===""||o===""){
+            r.innerText="fill every feild"
+        }
+        if(o==="/"&& b===0 ){
+            r.innerText="dinominator cannot be zero"
+        }
+        else{
+            switch
+        }
+        }
+    </script>
+</body>
+</html>
