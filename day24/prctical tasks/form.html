@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fm" onsubmit="return foc()">
+        <label for="">name</label>
+        <input type="text" name="name" id="nm">
+        <label for="">email</label>
+        <input type="email" name="email" id="em">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        function foc(){
+            let a=document.getElementById("nm")
+            let b=document.getElementById("em")
+            if(a.value.trim()==="" || b.value.trim()===""){
+                alert("eneter value")
+                return false;
+            }
+            alert("form submitted")
+            return true;
+        }
+    </script>
+</body>
+</html>
