@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login{
+            width: fit-content;
+            height: fit-content;
+            border: 1px solid rgb(116, 110, 110);
+            background-color: #817979;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+        #fm{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="" id="fm" onsubmit="oc(event)">
+            <label for="">email</label>
+            <input type="email" name="email" id="bx1"><br>
+            <label for="">password</label>
+            <input type="password" name="password" id="bx2"><br>
+            <button type="submit">login</button>
+        </form>
+    </div>
+    <p id="cc"></p>
+     
+        <script>
+            function oc(e){
+                e.preventDefault();
+                let a=document.getElementById("bx1").value
+                let b=document.getElementById("bx2").value
+                let c=document.getElementById("cc");
+                if(a===""||b===""){
+                    c.innerText="fill the feild correctly"
+                    return;
+                }
+                if(a.length<6){
+                    c.innerText="enter minimum 6 characters"
+                    return ;
+                }
+                if(!b.includes("@") && !b.includes("a")){
+                    c.innerText="password must contain @a"
+                }
+                    c.innerText="loggin succesful"
+            }
+        </script>
+</body>
+</html>
