@@ -13,10 +13,10 @@
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
-        <option value="-">-</option>
+        <option value="%">%</option>
         <option value="/">/</option>
     </select>
-    <button onclick="cl()"></button>
+    <button onclick="cl()">result</button>
     <p id="output"></p>
     <script>
         function cl(){
@@ -26,12 +26,30 @@
         let r=document.getElementById("output")
         if(a===""||b===""||o===""){
             r.innerText="fill every feild"
+            return;
         }
-        if(o==="/"&& b===0 ){
+        if(o==="/"&& b===0 && o==="%"){
             r.innerText="dinominator cannot be zero"
+            return;
         }
-        else{
-            switch
+        switch (o) {
+            case "+":
+                r.innerText=a+b;
+                break;
+            case "-":
+                r.innerText=a-b;
+                break;
+            case "*":
+                r.innerText=a*b;
+                break;
+            case "%":
+                r.innerText=a%b;
+                break;
+            case "/":
+                r.innerText=a/b;
+                break;
+            default:
+               r.innerText="select correct operator";
         }
         }
     </script>
