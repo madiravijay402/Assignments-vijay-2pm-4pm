@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Data App</title>
+</head>
+<body>
+
+<h2>User List</h2>
+<p id="loading"></p>
+<ul id="userList"></ul>
+
+<script>
+  const loadingText = document.getElementById("loading");
+  const userList = document.getElementById("userList");
+
+  loadingText.textContent = "Loading...";
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(data => {
+      loadingText.textContent = "";
+
+      data.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = user.name;
+        userList.appendChild(li);
+      });
+
+      // Save first user name in localStorage
+      localStorage.setItem("savedUser", JSON.stringify(data[0].name));
+    })
+    .catch(error => {
+      loadingText.textContent = "Error fetching data";
+      console.error(error);
+    });
+
+  // Reading from localStorage
+  const storedUser = JSON.parse(localStorage.getItem("savedUser"));
+  console.log("Stored User:", storedUser);
+</script>
+
+</body>
+</html>
