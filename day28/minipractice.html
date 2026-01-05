@@ -3,16 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VJEDZ Navbar</title>
+  <title>VJEDZ Portfolio</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     /* Navbar Background */
-    .bge{
-      background: linear-gradient(to right, #2e2d56, #7523c7);
-    }
+    
 
     /* Navbar text */
     .ft{
@@ -27,64 +25,108 @@
       width: 70px;
       height: auto;
       filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
-      
-      mix-blend-mode:multiply;
+       /* mix-blend-mode: multiply; */
     }
 
     /* Hover effect */
     .nav-link:hover{
-      color: #d1a8ff !important;
+      color: #000000 !important;
     }
+
+    /* Content box */
     .ct{
-        width: 700px;
-        height: 200px;
-        margin-top: 100px;
+      max-width: 700px;
+      height: 200px;
+      margin: 100px auto 20px;
+      border-radius: 12px;
     }
+
+    /* Button container */
+    .c2{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    /* Social icons */
+    .icon{
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    /* Navbar toggler visible on dark bg */
+    .navbar-toggler{
+      border-color: #fff;
+    }
+    .navbar-toggler-icon{
+      filter: invert(1);
+    }
+    .page1{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
   </style>
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg bge">
+<div class="page1">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bge bg-transperent">
   <div class="container-fluid">
 
-    <!-- Logo -->
     <img src="Futuristic VJEDZ logo design.png" alt="VJEDZ Logo" class="im">
 
-    <!-- Toggle button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu items -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active ft" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ft" href="#">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ft" href="#">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ft" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ft" href="#">Contact Me</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active ft" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link ft" href="#">About Me</a></li>
+        <li class="nav-item"><a class="nav-link ft" href="#">Skills</a></li>
+        <li class="nav-item"><a class="nav-link ft" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link ft" href="#">Contact Me</a></li>
       </ul>
     </div>
 
   </div>
 </nav>
-<div class="container bg-info-subtle ct">
-  <!-- Content here -->
+
+
+<!-- CONTENT BOX -->
+<div class="container bg-info-subtle ct d-flex align-items-center justify-content-center">
+  <h4 class="text-dark fs-1">VIJAY MADIRA</h4>
 </div>
-<button type="button" class="btn btn-outline-primary"><a href="Madira Vijay resume (2).pdf.pdf" class="nav-link" download="Madira vijay's Resume">resume</a></button>
-<button></button>
+
+<!-- BUTTONS -->
+<div class="c2">
+
+  <a href="Madira Vijay resume (2).pdf.pdf"
+     class="btn btn-secondary"
+     download="Madira Vijay Resume">
+     Resume
+  </a>
+
+  <a href="https://github.com/madiravijay402" class="btn btn-outline-dark">
+    <img src="GitHub-Mark-ea2971cee799.png" class="icon" alt="GitHub">
+  </a>
+
+  <a href="https://www.linkedin.com/in/vijay-madira-661982285/"
+     class="btn btn-primary">
+    <img src="images.png" class="icon" alt="LinkedIn">
+  </a>
+
+</div>
+</div>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
