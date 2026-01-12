@@ -2,6 +2,7 @@
 import './App.css'
 import Usercard from './Usercard';
 import Button from './Button';
+import Card from './Card';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -16,6 +17,10 @@ function App() {
       <h2>MADIRA VIJAY</h2>
       <Usercard name="LeoDass" courses={["fullstack","devops","dataanalyst"]} nokku={handleclick} />
       <Button brs={handleclick}/>
+      <Card>
+        <h1>hello every one i'm vijay</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error.</p>
+      </Card>
     </>
   )
 }
