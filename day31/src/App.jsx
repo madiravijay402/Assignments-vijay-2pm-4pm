@@ -3,6 +3,7 @@ import './App.css'
 import Usercard from './Usercard';
 import Button from './Button';
 import Card from './Card';
+import Footer from './day32/Footer';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -21,6 +22,8 @@ function App() {
         <h1>hello every one i'm vijay</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error.</p>
       </Card>
+      <h1>day32 assignment</h1>
+      <Footer year={2003}/>
     </>
   )
 }
