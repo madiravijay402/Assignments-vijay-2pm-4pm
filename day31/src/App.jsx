@@ -6,6 +6,7 @@ import Card from './Card';
 import Footer from './day32/Footer';
 import UserCard from './day32/UserCard';
 import Product from './day32/Product';
+import Profile from './day32/Profile';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -28,6 +29,7 @@ function App() {
       <Footer year={2003}/>
       <UserCard>Hello this is day32 assignment</UserCard>
       <Product name={["iphone16","acer aspire","gpu"]} price={[56000,90234,78000]}/>
+      <Profile/>
     </>
   )
 }

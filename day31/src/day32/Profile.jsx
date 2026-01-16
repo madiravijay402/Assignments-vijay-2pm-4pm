@@ -5,7 +5,7 @@ function Profile() {
     <>
     
     <div>
-        <img src="" alt="" />
+        <img src="day31\src\day32\passport photo.JPG" alt="" />
     </div>
     </>
   )
