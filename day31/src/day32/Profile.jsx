@@ -4,7 +4,7 @@ function Profile() {
   return (
     <>
     
-    <div className="card bg-secondary" style={{width:200, height:300}}>
+    <div className="card bg-secondary object-fit-contain border rounded" style={{width:200, height:300}}>
       <img src="" alt="" className='card-img-top'/>
       <div className="card-body">
         <h5 className='card-title'>card title</h5>
