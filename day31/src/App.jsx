@@ -11,6 +11,9 @@ import Counter from './day33/Counter';
 import Text from './day33/Text';
 import Buttonchange from './day33/Buttonchange';
 import Resetcounter from './day33/Resetcounter';
+import Cardp from './day33/practical tasks/Cardp';
+import logo from './passportphoto.jpg';
+import Inputapp from './day33/practical tasks/Inputapp';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -39,6 +42,8 @@ function App() {
       <Text/>
       <Buttonchange/>
       <Resetcounter/>
+      <Cardp><img src={logo} alt="" /></Cardp>
+      <Inputapp/>
       </div>
     </>
   )
