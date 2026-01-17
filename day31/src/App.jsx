@@ -7,6 +7,9 @@ import Footer from './day32/Footer';
 import UserCard from './day32/UserCard';
 import Product from './day32/Product';
 import Profile from './day32/Profile';
+import Counter from './day33/Counter';
+import Text from './day33/Text';
+import Buttonchange from './day33/Buttonchange';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -30,6 +33,9 @@ function App() {
       <UserCard>Hello this is day32 assignment</UserCard>
       <Product name={["iphone16","acer aspire","gpu"]} price={[56000,90234,78000]}/>
       <Profile/>
+      <Counter/>
+      <Text/>
+      <Buttonchange/>
     </>
   )
 }
