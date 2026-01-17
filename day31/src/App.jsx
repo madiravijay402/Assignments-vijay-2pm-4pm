@@ -10,6 +10,7 @@ import Profile from './day32/Profile';
 import Counter from './day33/Counter';
 import Text from './day33/Text';
 import Buttonchange from './day33/Buttonchange';
+import Resetcounter from './day33/Resetcounter';
 function App() {
   const name="I am Vijay Madira";
   const handleclick=()=>{
@@ -17,6 +18,7 @@ function App() {
   }
   return (
     <>
+      <div className="conatiner">
       <button onClick={handleclick}>clcik</button>
       <h1>Hello,{name}</h1>
       <h1>React</h1>
@@ -36,6 +38,8 @@ function App() {
       <Counter/>
       <Text/>
       <Buttonchange/>
+      <Resetcounter/>
+      </div>
     </>
   )
 }

@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 
 function Buttonchange() {
-     const[change,setchange]=useState("")
+      const [text, setText] = useState("Show");
+
   return (
-    <>
-    <div className='container'>
-    <button><input type="text" onChange={(e)=>{setchange(e.input.value)}} />{change}</button>
-    </div>
-    </>
-  )
+    <button onClick={() => 
+      setText(text === "Show" ? "Hide" : "Show")
+    }>
+      {text}
+    </button>
+  );
 }
 
 export default Buttonchange
