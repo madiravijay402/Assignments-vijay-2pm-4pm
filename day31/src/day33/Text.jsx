@@ -11,7 +11,7 @@ function Text() {
     <br />
     <h2>input while typing</h2>
     <input type="text" onChange={(e)=>setinput(e.target.value)} placeholder='enter name'/>
-    <p>{input}</p>
+    <p>{input}</p> 
     </>
   )
 }

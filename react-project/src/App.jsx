@@ -4,14 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Logg from './day34/Logg'
 import Cities from './day34/Cities'
-
+import Toglec from './day34/Toglec'
 function App() {
   return (
     <>
       <Logg/>
       <Cities names={["agra","delhi","mumbai","vizag","hyderabad"]}/>
+      <Toglec/>
     </>
   )
 }
 
-export default App
+export default App  
