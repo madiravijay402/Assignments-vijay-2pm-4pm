@@ -19,7 +19,7 @@ function Logg() {
     }
   return (
     <>
-    <div className="radhe" style={{width:200, height:200,backgroundColor:'black',display:'flex',flexDirection:'column',justifyContent:'center', gap:10,alignItems:'center',border:2,borderColor:'black',borderStyle:'solid',borderRadius:10,padding:20,marginTop:50}}>
+    <div  style={{width:200, height:200,backgroundColor:'black',display:'flex',flexDirection:'column',justifyContent:'center', gap:10,alignItems:'center',border:2,borderColor:'black',borderStyle:'solid',borderRadius:10,padding:20,marginTop:50}}>
     <form onSubmit={success}>
     <label className='text-light'>email</label>
     <input type="email" name='email' /><br />

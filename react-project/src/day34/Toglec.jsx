@@ -6,7 +6,7 @@ function Toglec() {
   return (
     <>
       <button onClick={()=>{settest(!test)}}>{test ? "hide":"expand"}</button>
-      {test && <div className={`container ${test ? 'expand' : 'hide'}`}>
+      {test && <div className={`container ${test ? 'show':''}`}>
         <h1 className='text-light'>used && for toggle </h1>
       </div>
       }
