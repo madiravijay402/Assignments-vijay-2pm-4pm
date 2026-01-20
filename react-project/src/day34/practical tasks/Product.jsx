@@ -44,7 +44,7 @@ function Product() {
                                 <span style={{textTransform: 'capitalize', fontWeight: '500'}}>
                                     {item.name}
                                 </span>
-                                <span style={{float: 'right', color: '#2563eb', fontWeight: 'bold'}}>
+                                <span style={{float:'right', color: '#2563eb', fontWeight: 'bold'}}>
                                     ₹{item.price.toLocaleString('en-IN')}
                                 </span>
                             </li>
