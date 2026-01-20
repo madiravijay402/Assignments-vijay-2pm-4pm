@@ -10,6 +10,7 @@ import Todo from './day34/practical tasks/Todo'
 import Product from './day34/practical tasks/Product'
 import Userlist from './day34/practical tasks/Userlist'
 import Nodata from './day34/practical tasks/Nodata'
+import Visible from './day34/practical tasks/Visible'
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
       <Product/>
       <Userlist/>
       <Nodata/>
+      <Visible/>
     </>
   )
 }
