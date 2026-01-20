@@ -8,6 +8,7 @@ import Toglec from './day34/Toglec'
 import Ternery from './day34/Ternery'
 import Todo from './day34/practical tasks/Todo'
 import Product from './day34/practical tasks/Product'
+import Userlist from './day34/practical tasks/Userlist'
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       <Ternery/>
       <Todo/>
       <Product/>
+      <Userlist/>
     </>
   )
 }
