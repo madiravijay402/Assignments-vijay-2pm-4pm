@@ -29,7 +29,7 @@ function Page1() {
         </div>
       </nav>
 
-      <div>
+      <div className='bg-primary'>
         <h1
           className="text-center mt-5 text-white"
           style={{ fontFamily: 'cursive' }}
@@ -37,15 +37,15 @@ function Page1() {
           Hello welcome to my portfolio !
         </h1>
 
-        <div className="text-center mt-3">
-          <button className="resume" type='button' download='vijays resume'>
-            <a href={vj} className="nav-link">Resume</a>
+        <div className="text-center mt-3 d-flex justify-content-center gap-3">
+          <button className="resume" type='button' >
+            <a href={vj} className="nav-link" target='_blank' download={"vijay's resume"}>Resume</a>
           </button>
           <button className="github">
-            <a href="https://github.com/madiravijay402" className="nav-link">Github</a>
+            <a href="https://github.com/madiravijay402" className="nav-link" target='_blank'>Github</a>
           </button>
           <button className="email">
-            <a href="mailtovijaymadira681@gmail.com" className="nav-link">Email</a>
+            <a href="mailto:vijaymadira681@gmail.com" className="nav-link" target='_blank'>Email</a>
           </button>
         </div>
       </div>
