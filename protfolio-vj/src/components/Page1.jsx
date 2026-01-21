@@ -29,7 +29,7 @@ function Page1() {
         </div>
       </nav>
 
-      <div className='bg-primary'>
+      <div className='bg-primary align-item-center' style={{width:"fit-content", height:"200px"}}>
         <h1
           className="text-center mt-5 text-white"
           style={{ fontFamily: 'cursive' }}
