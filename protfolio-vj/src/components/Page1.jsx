@@ -1,6 +1,7 @@
 import React from 'react'
 import vjlogo from './vjlogo.png.png'
 import vj from './vj.pdf'
+import 7020014_Desk_Typing_3840x2160 from './7020014_Desk_Typing_3840x2160.mp4'
 function Page1() {
   return (
     <>
@@ -48,6 +49,7 @@ function Page1() {
             <a href="mailto:vijaymadira681@gmail.com" className="nav-link" target='_blank'>Email</a>
           </button>
         </div>
+        <video src=""></video>
       </div>
     </>
   )
