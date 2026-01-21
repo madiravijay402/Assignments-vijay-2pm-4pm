@@ -1,6 +1,6 @@
 import React from 'react'
 import vjlogo from './vjlogo.png.png'
-
+import vj from './vj.pdf'
 function Page1() {
   return (
     <>
@@ -38,14 +38,14 @@ function Page1() {
         </h1>
 
         <div className="text-center mt-3">
-          <button className="resume">
-            <a href="" className="nav-link">Resume</a>
+          <button className="resume" type='button' download='vijays resume'>
+            <a href={vj} className="nav-link">Resume</a>
           </button>
           <button className="github">
-            <a href="" className="nav-link">Github</a>
+            <a href="https://github.com/madiravijay402" className="nav-link">Github</a>
           </button>
           <button className="email">
-            <a href="" className="nav-link">Email</a>
+            <a href="mailtovijaymadira681@gmail.com" className="nav-link">Email</a>
           </button>
         </div>
       </div>
