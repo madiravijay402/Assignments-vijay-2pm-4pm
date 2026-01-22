@@ -143,6 +143,10 @@ body, html {
   mix-blend-mode: screen; 
   filter: drop-shadow(0 0 30px rgba(58, 134, 255, 0.3));
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* Responsive */
 @media (max-width: 992px) {
