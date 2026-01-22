@@ -38,7 +38,7 @@ function Page2() {
             <h4 className="fw-semibold mt-4">Skills & Interests</h4>
             <div className="d-flex flex-wrap gap-2">
               {['Java', 'javascript', 'react', 'html', 'css'].map(skill => (
-                <span key={skill} className="badge bg-primary">
+                <span key={skill} className="badge bg-secondary">
                   {skill}
                 </span>
               ))}
