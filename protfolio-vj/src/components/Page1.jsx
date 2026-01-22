@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import vjlogo from './vjlogo.png.png';
 import vj from './vj.pdf';
 import smallgif from './smallgif.mp4';
@@ -15,9 +16,10 @@ function Page1() {
           </a>
 
           <div className="nav-links">
-            <a href="#" className="nav-link active">Home</a>
-            <a href="#" className="nav-link">Skills</a>
-            <a href="#" className="nav-link">Projects</a>
+            <nav>
+              <Link to='/Page2'>About me</Link>
+            </nav>
+           
           </div>
         </div>
       </nav>
