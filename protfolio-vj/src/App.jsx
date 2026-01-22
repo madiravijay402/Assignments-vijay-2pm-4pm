@@ -8,7 +8,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/Page1" element={<Page1 />} />
-        <Route path="/Page2" element={<Page2 />} />
       </Routes>
     </BrowserRouter>
   );
