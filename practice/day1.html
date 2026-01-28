@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="vj"></p>
+    <p class="cj"></p>
+    <ul id="li"></ul>
+    <button onclick="ck()">add</button>
+    <button onclick="rm()">rem</button>
+    <div style="width: 200px; height: 300px; background-color: antiquewhite;" id="st"></div>
+    <script>
+        let a=document.getElementById("vj");
+        a.innerText="hello world";
+        let b=document.querySelector(".cj");
+        b.innerText="vanakam mapla";
+        function ck(){
+            let c=document.getElementById("li");
+            let li=document.createElement("li")
+            li.innerText="item1";
+            c.appendChild(li);
+        }
+        function rm(){
+            let c=document.getElementById("li");
+            if(c.lastElementChild){
+                c.removeChild(c.lastElementChild);
+            }
+        }
+        let d=document.getElementById("st");
+        d.addEventListener("mouseover",()=>{
+            d.style.backgroundColor="red";
+        })
+        d.addEventListener("mouseout",()=>{
+            d.style.backgroundColor="blue";
+        })
+    </script>
+</body>
+</html>
