@@ -8,13 +8,24 @@
 </head>
 <body>
     <div class="mb" style="width: 400px; margin: 0 auto; border: 2px solid black;margin-top: 20px;padding: 30px;">
-        <form action="">
+        <form onsubmit="fc(event)" id="fmm">
             <label for="" class="form-label">email</label>
             <input type="text" name="email" class="form-control">
             <label for="" class="form-label">password</label>
             <input type="password" name="password" class="form-control">
-            <button type="submit" class="btn btn-primary" style="margin-top: 5px;">login</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 5px;" id="bc">login</button>
         </form>
     </div>
+    <div id="vs"></div>
+    <script>
+         let b=document.createElement("div");
+        let c=document.getElementById("fmm");
+        let d=document.getElementById("vs")
+        function fc(e){
+            e.preventDefault();
+            b.value=c.value;
+            d.appendChild(b);
+    }
+    </script>
 </body>
 </html>
