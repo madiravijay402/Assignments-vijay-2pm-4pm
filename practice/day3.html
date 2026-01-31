@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form onsubmit="sb()">
-        <label for="nm">name</label>
-        <input type="text" id="nm" name="name">
-        <label for="em">email</label>
-        <input type="email" id="em" name="email">
-        <button type="submit">login</button>
-    </form>
-    
+    <div id="parent" style="width: 200px; background-color: aqua; height: 300px;">
+        <div id="child" style="width: 100px; height: 100px; background-color: antiquewhite;">
+
+        </div>
+    </div>
+    <script>
+        let a=document.getElementById("parent").addEventListener("click",
+           ()=> {alert("you killed me first")},true
+        )
+        let b=document.getElementById("child").addEventListener("click",()=>{alert("then you killed my son")},true)
+    </script>
 </body>
 </html>
