@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="sb(event)">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="password">password</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">login</button>
+    </form>
+    <p id="out"></p>
+    <script>
+        let a=document.getElementById("out");
+        let b=document.getElementById("name");
+        let c=document.getElementById("password");
+        [b,c].forEach(el => {
+            el.addEventListener("input",()=>{
+                a.innerText="name:"+b.value+" password:"+c.value;
+            })
+        })
+        function sb(e){
+            e.preventDefault();
+            alert("form submitted");
+        }
+    </script>
+</body>
+</html>
