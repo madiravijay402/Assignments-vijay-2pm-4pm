@@ -11,11 +11,20 @@
 
         </div>
     </div>
+    <div id="db" style="background-color: blue; width: 300px;">hello world db</div>
+    <div id="over" style="background-color: brown;">muse over</div>
+
     <script>
         let a=document.getElementById("parent").addEventListener("click",
            ()=> {alert("you killed me first")},true
         )
         let b=document.getElementById("child").addEventListener("click",()=>{alert("then you killed my son")},true)
+        let c = document.getElementById("db");
+
+c.addEventListener("dblclick", () => {
+    c.style.width = (c.style.width === "200px") ? "300px" : "200px";
+});
+
     </script>
 </body>
 </html>
