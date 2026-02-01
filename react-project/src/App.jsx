@@ -2,11 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Input from './day36/Input';
 import Multiple from './day36/Multiple';
+import Reload from './day36/Reload';
 function App() {
   return (
     <>
       <Input/>
       <Multiple/>
+      <Reload/>
     </>
   )
 }
