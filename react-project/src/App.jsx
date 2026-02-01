@@ -3,12 +3,14 @@ import './App.css'
 import Input from './day36/Input';
 import Multiple from './day36/Multiple';
 import Reload from './day36/Reload';
+import Checkbox from './day36/Checkbox';
 function App() {
   return (
     <>
       <Input/>
       <Multiple/>
       <Reload/>
+      <Checkbox/>
     </>
   )
 }
