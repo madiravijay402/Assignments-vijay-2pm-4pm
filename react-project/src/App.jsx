@@ -1,18 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import NAvgate from './day36/NAvgate'
-import About from './day36/About';
-import Home from './day36/Home'
+import Input from './day36/Input';
+import Multiple from './day36/Multiple';
 function App() {
   return (
     <>
-      <NAvgate/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/About' element={<About/>}/>
-          <Route path='/Home' element={<Home/>}/>
-        </Routes>
-
+      <Input/>
+      <Multiple/>
     </>
   )
 }
