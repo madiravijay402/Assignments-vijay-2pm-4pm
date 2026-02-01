@@ -9,6 +9,7 @@ import Reset from './day35/Reset';
 import Login from './day35/progressive project/Login';
 import Sign from './day35/progressive project/Sign';
 import Profile from './day35/progressive project/Profile';
+import Once from './day36/Once';
 function App() {
   return (
     <>
@@ -21,6 +22,8 @@ function App() {
       <Login/>
       <Sign/>
       <Profile/>
+      <h1>day36</h1>
+      <Once/>
     </>
   )
 }
