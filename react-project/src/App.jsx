@@ -8,6 +8,7 @@ import Check from './day36/Check';
 import Reset from './day36/Reset';
 import Login from './day36/progressive project/Login';
 import Sign from './day36/progressive project/Sign';
+import Profile from './day36/progressive project/Profile';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
       <Reset/>
       <Login/>
       <Sign/>
+      <Profile/>
     </>
   )
 }
