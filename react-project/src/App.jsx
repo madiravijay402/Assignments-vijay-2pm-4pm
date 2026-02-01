@@ -6,6 +6,8 @@ import Reload from './day36/Reload';
 import Checkbox from './day36/Checkbox';
 import Check from './day36/Check';
 import Reset from './day36/Reset';
+import Login from './day36/progressive project/Login';
+import Sign from './day36/progressive project/Sign';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
       <Checkbox/>
       <Check/>
       <Reset/>
+      <Login/>
+      <Sign/>
     </>
   )
 }
