@@ -4,6 +4,7 @@ import Input from './day36/Input';
 import Multiple from './day36/Multiple';
 import Reload from './day36/Reload';
 import Checkbox from './day36/Checkbox';
+import Check from './day36/Check';
 function App() {
   return (
     <>
@@ -11,31 +12,11 @@ function App() {
       <Multiple/>
       <Reload/>
       <Checkbox/>
+      <Check/>
     </>
   )
 }
 
 export default App  
 
-// import { Routes, Route } from 'react-router-dom';
-// import './App.css';
-// import NAvgate from './day36/NAvgate';
-// import Home from './day36/Home';
-// import About from './day36/About';
-
-// function App() {
-//   return (
-//     <>
-//       <NAvgate />
-
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/home" element={<Home />} />
-//         <Route path="/about" element={<About />} />
-//       </Routes>
-//     </>
-//   );
-// }
-
-// export default App;
 

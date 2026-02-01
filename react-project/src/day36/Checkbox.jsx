@@ -16,7 +16,7 @@ function Checkbox() {
 
   return (
     <div className='box' style={{marginTop:50}}>
-      <form>
+      <form className='card'>
         <h4>Favorite IPL teams</h4>
         <label>csk</label>
         <input type="checkbox" name="csk" checked={teams.csk} onChange={handleChange} />
