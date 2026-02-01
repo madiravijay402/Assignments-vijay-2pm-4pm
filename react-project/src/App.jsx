@@ -5,6 +5,7 @@ import Multiple from './day36/Multiple';
 import Reload from './day36/Reload';
 import Checkbox from './day36/Checkbox';
 import Check from './day36/Check';
+import Reset from './day36/Reset';
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Reload/>
       <Checkbox/>
       <Check/>
+      <Reset/>
     </>
   )
 }
