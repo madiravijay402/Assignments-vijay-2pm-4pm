@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 function Change() {
     const[count,setcount]=useState(0)
   useEffect(()=>{
-    alert("state changed")
+    
     setcount(count+1)
   },[count])
   return (

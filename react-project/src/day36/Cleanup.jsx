@@ -6,10 +6,10 @@ function Cleanup() {
         const timer=setInterval(()=>{
             setcount(count+1)
         },1000)
-    //     return () => {
-    //   clearInterval(timer)
-    //   alert("Timer stopped")
-    // }
+        return () => {
+      clearInterval(timer)
+      alert("Timer stopped")
+    }
     },[])
     
   return (

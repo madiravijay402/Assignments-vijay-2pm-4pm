@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Once() {
   const[count,setcount]=useState(0)
   useEffect(()=>{
-    alert("state changed")
+    // alert("state changed")
     setcount(count+1)
   },[])
   return (

@@ -12,6 +12,8 @@ import Profile from './day35/progressive project/Profile';
 import Once from './day36/Once';
 import Change from './day36/Change';
 import Cleanup from './day36/Cleanup';
+import Error from './day36/Error';
+import Title from './day36/practical tasks/Title';
 function App() {
   return (
     <>
@@ -26,8 +28,10 @@ function App() {
       <Profile/>
       <h1>day36</h1>
       <Once/>
-      {/* <Change/> */}
-      <Cleanup/>
+      {/* <Change/>
+      <Cleanup/> */}
+      {/* <Error/> */}
+      <Title/>
     </>
   )
 }
