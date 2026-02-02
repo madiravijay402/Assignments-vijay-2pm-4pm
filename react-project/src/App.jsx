@@ -14,6 +14,8 @@ import Change from './day36/Change';
 import Cleanup from './day36/Cleanup';
 import Error from './day36/Error';
 import Title from './day36/practical tasks/Title';
+import Json from './day36/practical tasks/Json';
+import Window from './day36/practical tasks/Window';
 function App() {
   return (
     <>
@@ -27,11 +29,13 @@ function App() {
       <Sign/>
       <Profile/>
       <h1>day36</h1>
-      <Once/>
+      {/* <Once/> */}
       {/* <Change/>
       <Cleanup/> */}
       {/* <Error/> */}
       <Title/>
+      <Json/>
+      <Window/>
     </>
   )
 }
