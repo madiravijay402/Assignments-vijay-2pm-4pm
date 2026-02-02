@@ -1,11 +1,12 @@
+
 import React, { useEffect, useState } from 'react'
 
-function Once() {
-  const[count,setcount]=useState(0)
+function Change() {
+    const[count,setcount]=useState(0)
   useEffect(()=>{
     alert("state changed")
     setcount(count+1)
-  },[])
+  },[count])
   return (
     <div>
       <button onClick={()=>setcount(count+1)}>add</button>
@@ -14,4 +15,4 @@ function Once() {
   )
 }
 
-export default Once
+export default Change

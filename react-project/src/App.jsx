@@ -10,6 +10,7 @@ import Login from './day35/progressive project/Login';
 import Sign from './day35/progressive project/Sign';
 import Profile from './day35/progressive project/Profile';
 import Once from './day36/Once';
+import Change from './day36/Change';
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
       <Profile/>
       <h1>day36</h1>
       <Once/>
+      {/* <Change/> */}
     </>
   )
 }
