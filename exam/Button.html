@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Hover</title>
+  <style>
+    .con{
+      background-color: aliceblue;
+      border: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .bn{
+      padding: 14px 18px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transform: scale(1);
+      transition: background-color 0.5s ease-in,
+                  transform 0.3s ease;
+    }
+
+    .bn:hover{
+      transform: scale(1.1);
+      background-color: #d6ff41;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="con">
+    <button class="bn">click</button>
+  </div>
+
+</body>
+</html>
