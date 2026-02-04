@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #toggle{
+            display: none;
+        } */
+        .sh{
+            display: none;
+        }
+        #toggle:checked +.sh{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   
+<label for="toggle" class="bn">Click</label>
+ <input type="checkbox" id="toggle">
+
+<p class="sh">
+  This text appears when clicked.
+</p>
+<details>
+  <summary>Click</summary>
+  <p>This text shows on click without JS.</p>
+</details>
+
+</body>
+</html>
