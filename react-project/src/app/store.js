@@ -13,6 +13,19 @@
 // dispatch - this used to send action to redux 
 
 //selectoroe is used to read state from the store 
-const count=usSele(state=>state.count.value)
+
 
 // initial sate is the default value of slice of the state
+import{configureStore} from "@reduxjs/toolkit"
+
+import {counterReducer} from "../features/counter/counterSlice"
+
+export const store= configureStore({
+    reducer:{
+        counter:counterReducer,
+
+    }
+})
+
+export default store
+
