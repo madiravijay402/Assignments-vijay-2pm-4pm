@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import vjlogo from './vjlogo.png';
+import vjlogo from './vjlogo.png.png';
 import vj from './vj.pdf';
 import smallgif from './smallgif.mp4';
 import Page2 from './Page2';
